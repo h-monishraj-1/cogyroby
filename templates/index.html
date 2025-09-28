@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cognitive Agent Playground</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cognitive Agent Playground</h1>
+    
+    <div class="playground-container">
+        <canvas id="world-canvas"></canvas>
+        
+        <div id="side-panel">
+            <h2>Controls</h2>
+            <div class="controls">
+                <button id="add-key">Add Key</button>
+                <button id="add-door">Add Door</button>
+                <button id="add-charger">Add Charger</button>
+                <button id="add-obstacle">Add Obstacle</button>
+                <button id="reset-agent">Reset Agent</button>
+            </div>
+            
+            <h2>Agent Status</h2>
+            <div id="agent-status">
+                <p>Energy: <span id="energy-level">100</span>%</p>
+                <p>Has Key: <span id="key-status">No</span></p>
+                <p>Position: (<span id="agent-position">20, 15</span>)</p>
+            </div>
+            
+            <h2>Agent's Reasoning Log</h2>
+            <div id="reasoning-panel"></div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
